@@ -184,6 +184,7 @@ body {
     padding: 10px;
     border-radius: 50%;
     position: relative;
+    transition: all ease 0.4s;
 }
 
 .btns::after {
@@ -197,10 +198,6 @@ body {
 
 }
 
-.btns:hover::after {
-    margin-top: 50px;
-    display: block;
-}
 
 
 

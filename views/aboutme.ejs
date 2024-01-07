@@ -41,27 +41,28 @@
                     <div class="btn">Linkedin</div>
                 </div>
             </div>
-            
+
         </div>
 
     </div>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
-.buttons{
-    display: flex;
-    justify-content: left;
-    margin-left: 13px;
-    gap: 10px;
-    margin-top: 30px;
-    font-size: 10px;
-    font-family: 'Courier Prime', monospace;
-cursor: default;
-position: relative;
 
-}
+        .buttons {
+            display: flex;
+            justify-content: left;
+            margin-left: 13px;
+            gap: 10px;
+            margin-top: 30px;
+            font-size: 10px;
+            font-family: 'Courier Prime', monospace;
+            cursor: default;
+            position: relative;
 
-/* .btn::after{
+        }
+
+        /* .btn::after{
     content: "";
     height: 100%;
     width: 100%;
@@ -71,18 +72,20 @@ position: relative;
     position: absolute;
     bottom: -100;
 } */
-        .buttons .btn{
-    background-color: blueviolet;
-    border-radius: 3px;
+        .buttons .btn {
+            background-color: blueviolet;
+            border-radius: 3px;
             padding: 10px;
             color: white;
-transition: all ease 0.8s;
+            transition: all ease 0.8s;
 
         }
-        .btn:hover{
+
+        .btn:hover {
             background-color: white;
             color: rgb(106, 90, 90);
         }
+
         .heading {
             font-size: 6vw;
             font-weight: bold;
@@ -169,7 +172,8 @@ transition: all ease 0.8s;
 
 
             }
-            .buttons{
+
+            .buttons {
                 display: flex;
                 justify-content: center;
                 gap: 5px;
@@ -178,6 +182,25 @@ transition: all ease 0.8s;
         }
     </style>
 
+
+    <script>
+        let social = document.querySelectorAll('.btn')
+        social[0].addEventListener('click', () => {
+            location.href = "https://www.facebook.com/profile.php?id=100069794144427"
+
+        })
+        social[1].addEventListener('click', () => {
+            location.href = "https://github.com/saradbhatt"
+
+        })
+        social[2].addEventListener('click', () => {
+            location.href = "https://www.linkedin.com/in/sa-rad-89070b281/"
+
+        })
+
+
+
+    </script>
 
 </body>
 

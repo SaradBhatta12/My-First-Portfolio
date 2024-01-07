@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect With Us</title>
+</head>
+
+<body>
+
+    <div class="backround">
+        <img src="/images/contact.gif" alt="">
+    </div>
+
+    <div class="main">
+        <div class="trigger">
+            <div></div>
+        </div>
+        <div class="formMain">
+            <p class="heading">
+                Contact Us
+            </p>
+            <p class="advice">
+                Be a member of my team
+            </p>
+
+            <div class="form">
+                <form action="" id="form" class="form">
+                    <input type="text" name="Name" placeholder="Full Name"> <br>
+                    <input type="email" name="email" placeholder="Email"><br>
+                    <input type="text" name="message" placeholder="Your Message">
+                    <div class="button">
+                        Submit
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        .trigger {
+            height: 20px;
+            width: 20px;
+            background-color: rgb(232, 232, 238);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all ease 0.3s;
+
+        }
+
+        .trigger div {
+            height: 10px;
+            width: 10px;
+            background-color: black;
+            border-radius: 50%;
+
+
+        }
+
+        .button {
+            border: solid rgb(206, 193, 193) 1px;
+            color: rgb(206, 193, 193);
+            padding: 10px;
+            margin-top: 40px;
+            text-transform: uppercase;
+            cursor: default;
+            border-radius: 20px;
+
+        }
+
+        * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+
+        .backround {
+            height: 100vh;
+            width: 100%;
+            background: url('/images/contact.gif');
+
+        }
+
+        .form {
+            display: flex;
+            height: 70%;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .form input {
+            outline: none;
+            background-color: transparent;
+            border: none;
+            border-bottom-width: 1000px;
+            border-bottom: solid rgb(206, 193, 193) 1px;
+            padding-top: 20px;
+            padding-right: 20px;
+            border-width: 60%;
+            padding: 5px;
+            margin: 10px;
+            color: rgb(206, 193, 193);
+            font-size: 15px;
+            width: 60vw;
+            text-transform: uppercase;
+
+        }
+
+        .form input::placeholder {
+            color: rgb(206, 193, 193);
+        }
+
+        .advice {
+            width: 50%;
+            color: rgb(206, 193, 193);
+            font-family: Roboto, HelveticaNeue, Arial, sans-serif;
+            text-align: center;
+            margin: auto;
+            letter-spacing: 1px;
+            padding: 4px;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .main {
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+
+        .formMain {
+            width: 60%;
+            height: 90%;
+            background-color: transparent;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 4px;
+        }
+
+        .formMain .heading {
+            color: rgb(206, 193, 193);
+            text-transform: uppercase;
+            font-size: 30px;
+            font-family: Roboto, HelveticaNeue, Arial, sans-serif;
+            font-weight: 900;
+            text-align: center;
+            margin-top: 15px;
+            padding: 4px;
+        }
+
+
+
+
+        /* ============animation========== */
+
+        @media(max-width:500px) {
+            .backround img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    </style>
+
+
+    <script>
+        let trigger = document.querySelector('.trigger');
+        let body = document.querySelector('.main');
+        body.addEventListener('mousemove', (dets) => {
+            let cx = dets.clientX;
+            let cy = dets.clientY;
+            trigger.style.left = cx + "px";
+            trigger.style.top = cy + "px";
+        })
+    </script>
+
+</body>
+
+</html>

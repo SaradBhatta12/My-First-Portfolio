@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>MyPortFolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <div class="first">
+    <div class="trigger">
+      <div></div>
+    </div>
+    <div class="context">
+      <div class="navbar">
+        <div class="logo">
+          <h4>Sarad</h4>
+        </div>
+        <div class="icons">
+          <a href="#">
+            <div class="facebook"><i class="ri-facebook-circle-line"></i></div>
+          </a>
+          <a href="#">
+            <div class="facebook"><i class="ri-whatsapp-line"></i></div>
+          </a>
+          <a href="#">
+            <div class="facebook"><i class="ri-instagram-line"></i></div>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="hero">
+        <div class="heroSection">
+          <div class="myName">
+            <span>S</span>
+            <span>A</span>
+            <span>R</span>
+            <span>A</span>
+            <span>D</span>
+
+          </div>
+        </div>
+
+      </div>
+      <!-- <div class="Button">
+  <div class="btn">
+    Explore
+
+  </div>
+ </div> -->
+      <div class="aboutMain">
+
+        <div class="AboutMe">
+          <p class="myIntro">hello its me sarad bhatt</p>
+          <p class="profession">
+            Iam Middle Stack Front End Web Developer.</p>
+        </div>
+
+        <div class="ButtoN">
+          <div class="btns" id="box"><i class="ri-phone-line"></i></i></i></div>
+        </div>
+      </div>
+
+
+      <!-- =============project ==================== -->
+
+      <div class="projects">
+
+        <p class="headings">
+          projects
+        </p>
+
+        <div class="RightSec">
+          <div class="RightMain">
+            <div class="buttonR">Tools</div>
+            <div class="buttonR">Websites</div>
+            <div class="buttonR">Portfolios</div>
+            <div class="buttonR">Resumes</div>
+            <div class="buttonR">Another Components</div>
+            <div class="buttonR">Websites Clonning</div>
+            <div class="buttonR">My Image Gallary</div>
+
+
+          </div>
+        </div>
+
+        <!-- =================contact================ -->
+
+
+      </div>
+
+      <div class="MyProfile">
+        <div class="contentProfile">
+          Personal <br>
+          details
+
+<div class="buttonProfile">
+<a href="/aboutme">Let's See</a>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="area">
+
+  </div>
+
+
+  <script>
+    let projects = document.querySelectorAll('.buttonR');
+    projects.forEach((e)=>{
+
+      e.addEventListener('click',()=>{
+        location.href = "/projects"
+      })
+
+    })
+
+    let contact = document.querySelector('#box');
+    contact.addEventListener('click', () => {
+      location.href = '/contact'
+    })
+    let trigger = document.querySelector('.trigger');
+    let bdy = document.querySelector('.context');
+    bdy.addEventListener('mousemove', (dets) => {
+      let cx = dets.clientX;
+      let cy = dets.clientY;
+      trigger.style.left = cx + "px";
+      trigger.style.top = cy + "px";
+    })
+
+    let area = document.querySelector('.area');
+    window.onload = () => {
+      area.innerHTML = ` <ul class="circles">
+      <video src="/images/backround.mp4" loop autoplay muted></video>
+    </ul>`;
+    }
+  </script>
+</body>
+
+</html>

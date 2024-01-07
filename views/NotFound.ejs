@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project section</title>
+</head>
+
+<body>
+
+
+
+    <div class="main">
+
+        <div class="projects">
+            <div class="content">
+                <div class="heading">
+                    My <br> projects
+                </div>
+                <div class="para">
+                    My most of the projects are private some are public. <br> If you want to see these all are
+                    available on.
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="glow-on-hover">Github</button>
+                <button class="glow-on-hover">Replit</button>
+                <button class="glow-on-hover">Stackblitz</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let allButtons = document.querySelectorAll(".glow-on-hover")
+
+allButtons[0].addEventListener('click',()=>{
+    location.href = "https://github.com/saradbhatt"
+
+})
+allButtons[1].addEventListener('click',()=>{
+    location.href = "https://www.linkedin.com/in/sa-rad-89070b281/"
+    
+})
+allButtons[2].addEventListener('click',()=>{
+    location.href = "https://github.com/saradbhatt"
+    
+})
+</script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+
+        .para {
+            font-size: 13px;
+            color: #00ffd5;
+            font-family: 'Courier Prime', monospace;
+
+        }
+
+        @media screen and (max-width:1050px) {
+            .projects {
+
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .para {
+                text-align: center;
+                text-transform: capitalize;
+                color: #00ffd5;
+            }
+
+            .heading {
+                text-align: center;
+            }
+
+        }
+
+        body {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+            background-color: black;
+            color: white;
+            overflow: hidden;
+
+            ::selection {
+                color: blue;
+            }
+        }
+
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .heading {
+            color: #00ffd5;
+
+            font-size: 100px;
+            text-transform: uppercase;
+        }
+
+
+
+
+        .projects {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+
+
+
+        /* ===============button effect ================ */
+
+        .glow-on-hover {
+            width: 220px;
+            height: 50px;
+            border: none;
+            outline: none;
+            color: #a58d8d;
+            margin: 15px;
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+        }
+
+        .glow-on-hover:before {
+            content: " ";
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .glow-on-hover:active {
+            color: #000
+        }
+
+        .glow-on-hover:active:after {
+            background: transparent;
+        }
+
+        .glow-on-hover:hover:before {
+            opacity: 1;
+        }
+
+        .glow-on-hover:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+
+        @keyframes glowing {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+    </style>
+</body>
+
+</html>
